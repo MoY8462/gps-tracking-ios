@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21232C64FBD78640DAF8A809 /* Pods_gps_tracking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1211011E5898876BAC1B735D /* Pods_gps_tracking.framework */; };
 		E4F45B6329A70FA40061CC9E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F45B6229A70FA40061CC9E /* AppDelegate.swift */; };
 		E4F45B6529A70FA40061CC9E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F45B6429A70FA40061CC9E /* SceneDelegate.swift */; };
 		E4F45B6729A70FA40061CC9E /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F45B6629A70FA40061CC9E /* AuthViewController.swift */; };
@@ -14,13 +15,13 @@
 		E4F45B6C29A70FA60061CC9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4F45B6B29A70FA60061CC9E /* Assets.xcassets */; };
 		E4F45B6F29A70FA60061CC9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4F45B6D29A70FA60061CC9E /* LaunchScreen.storyboard */; };
 		E4F45B7729A7141E0061CC9E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E4F45B7629A7141E0061CC9E /* GoogleService-Info.plist */; };
-		E4F45B7A29A7157B0061CC9E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E4F45B7929A7157B0061CC9E /* FirebaseAnalytics */; };
-		E4F45B7C29A7157B0061CC9E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = E4F45B7B29A7157B0061CC9E /* FirebaseAuth */; };
-		E4F45B7E29A7157B0061CC9E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E4F45B7D29A7157B0061CC9E /* FirebaseFirestore */; };
 		E4F45B8029A7264F0061CC9E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F45B7F29A7264F0061CC9E /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1211011E5898876BAC1B735D /* Pods_gps_tracking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gps_tracking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		646906DA380B0E6100559106 /* Pods-gps-tracking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gps-tracking.release.xcconfig"; path = "Target Support Files/Pods-gps-tracking/Pods-gps-tracking.release.xcconfig"; sourceTree = "<group>"; };
+		D9F61CDDEBDF220C4CD293FB /* Pods-gps-tracking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gps-tracking.debug.xcconfig"; path = "Target Support Files/Pods-gps-tracking/Pods-gps-tracking.debug.xcconfig"; sourceTree = "<group>"; };
 		E4F45B5F29A70FA40061CC9E /* gps-tracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gps-tracking.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F45B6229A70FA40061CC9E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4F45B6429A70FA40061CC9E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,20 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4F45B7A29A7157B0061CC9E /* FirebaseAnalytics in Frameworks */,
-				E4F45B7C29A7157B0061CC9E /* FirebaseAuth in Frameworks */,
-				E4F45B7E29A7157B0061CC9E /* FirebaseFirestore in Frameworks */,
+				21232C64FBD78640DAF8A809 /* Pods_gps_tracking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A4D64F7E23E5749CA2BC40C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1211011E5898876BAC1B735D /* Pods_gps_tracking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E169E3CF3A41249D747E2934 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D9F61CDDEBDF220C4CD293FB /* Pods-gps-tracking.debug.xcconfig */,
+				646906DA380B0E6100559106 /* Pods-gps-tracking.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E4F45B5629A70FA40061CC9E = {
 			isa = PBXGroup;
 			children = (
 				E4F45B6129A70FA40061CC9E /* gps-tracking */,
 				E4F45B6029A70FA40061CC9E /* Products */,
+				E169E3CF3A41249D747E2934 /* Pods */,
+				7A4D64F7E23E5749CA2BC40C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,20 +104,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E4F45B7329A70FA60061CC9E /* Build configuration list for PBXNativeTarget "gps-tracking" */;
 			buildPhases = (
+				EAC44D74A1239E88096B80C6 /* [CP] Check Pods Manifest.lock */,
 				E4F45B5B29A70FA40061CC9E /* Sources */,
 				E4F45B5C29A70FA40061CC9E /* Frameworks */,
 				E4F45B5D29A70FA40061CC9E /* Resources */,
+				2E3E0B353F8C3CFD6EB3A62B /* [CP] Copy Pods Resources */,
+				60CF088D5BA5F4C22FD5CDC1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "gps-tracking";
-			packageProductDependencies = (
-				E4F45B7929A7157B0061CC9E /* FirebaseAnalytics */,
-				E4F45B7B29A7157B0061CC9E /* FirebaseAuth */,
-				E4F45B7D29A7157B0061CC9E /* FirebaseFirestore */,
-			);
 			productName = "gps-tracking";
 			productReference = E4F45B5F29A70FA40061CC9E /* gps-tracking.app */;
 			productType = "com.apple.product-type.application";
@@ -128,9 +144,6 @@
 				Base,
 			);
 			mainGroup = E4F45B5629A70FA40061CC9E;
-			packageReferences = (
-				E4F45B7829A7157B0061CC9E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-			);
 			productRefGroup = E4F45B6029A70FA40061CC9E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -153,6 +166,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E3E0B353F8C3CFD6EB3A62B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gps-tracking/Pods-gps-tracking-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gps-tracking/Pods-gps-tracking-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gps-tracking/Pods-gps-tracking-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60CF088D5BA5F4C22FD5CDC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gps-tracking/Pods-gps-tracking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gps-tracking/Pods-gps-tracking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gps-tracking/Pods-gps-tracking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAC44D74A1239E88096B80C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gps-tracking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E4F45B5B29A70FA40061CC9E /* Sources */ = {
@@ -304,12 +376,14 @@
 		};
 		E4F45B7429A70FA60061CC9E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9F61CDDEBDF220C4CD293FB /* Pods-gps-tracking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CLF5XGZJ27;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "gps-tracking/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -332,12 +406,14 @@
 		};
 		E4F45B7529A70FA60061CC9E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 646906DA380B0E6100559106 /* Pods-gps-tracking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CLF5XGZJ27;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "gps-tracking/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -380,35 +456,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		E4F45B7829A7157B0061CC9E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 9.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		E4F45B7929A7157B0061CC9E /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E4F45B7829A7157B0061CC9E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		E4F45B7B29A7157B0061CC9E /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E4F45B7829A7157B0061CC9E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		E4F45B7D29A7157B0061CC9E /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E4F45B7829A7157B0061CC9E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E4F45B5729A70FA40061CC9E /* Project object */;
 }

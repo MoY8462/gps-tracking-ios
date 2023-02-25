@@ -27,8 +27,10 @@ class AuthViewController: UIViewController {
             Auth.auth().createUser(withEmail: email, password: password){
                 (result, error) in
                 if let result = result, error == nil{
-                    self.navigationController? .pushViewController(HomeViewController(email: result.user.email!, provider: .basic), animated: true)
-                } else {
+                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                    let screen = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
+                    screen?.email = email
+                    self.navigationController? .pushViewController(screen!, animated: true)                } else {
                     let alertController = UIAlertController(title: "Error", message: "Se ha registrado un error registrando el usuario", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
                     
@@ -42,8 +44,10 @@ class AuthViewController: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password){
                 (result, error) in
                 if let result = result, error == nil{
-                    
-                    self.navigationController? .pushViewController(HomeViewController(email: result.user.email!, provider: .basic), animated: true)
+                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                    let screen = storyBoard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController
+                    screen?.email = email
+                    self.navigationController? .pushViewController(screen!, animated: true)
                 } else {
                     let alertController = UIAlertController(title: "Error", message: "Se ha registrado un error registrando el usuario", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))

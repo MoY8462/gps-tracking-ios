@@ -91,6 +91,7 @@
                         <outlet property="logInButton" destination="6Dc-59-2gK" id="nsD-3f-phL"/>
                         <outlet property="passwordTextField" destination="yF1-XU-MzZ" id="Jba-Rv-G38"/>
                         <outlet property="signUpButton" destination="2NS-kt-C60" id="DaW-R2-3Ud"/>
+                        <segue destination="BOy-RT-B1e" kind="show" id="XnK-Ah-z5B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -100,13 +101,13 @@
         <!--Home View Controller-->
         <scene sceneID="qEi-cm-h9D">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="BOy-RT-B1e" customClass="HomeViewController" customModule="gps_tracking" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BOy-RT-B1e" customClass="HomeViewController" customModule="gps_tracking" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uEA-Ld-N4s">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="C0T-sc-GF5">
-                                <rect key="frame" x="16" y="75" width="361" height="136"/>
+                                <rect key="frame" x="16" y="119" width="361" height="136"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOc-yI-YKN">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="40"/>
