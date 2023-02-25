@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,9 +12,12 @@
         <scene sceneID="GFT-Bb-ivg">
             <objects>
                 <navigationController id="NE9-dd-wts" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Ha-Fa-bsN">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="8Ha-Fa-bsN">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" name="Quaternary"/>
+                        <color key="tintColor" name="Primary"/>
+                        <color key="barTintColor" name="Quaternary"/>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8b9-Lm-jl0"/>
@@ -33,8 +35,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="R48-Rk-FMZ">
-                                <rect key="frame" x="16" y="119" width="361" height="136"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="R48-Rk-FMZ">
+                                <rect key="frame" x="16" y="455" width="361" height="190"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo electrónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hjv-4v-cp4">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="40"/>
@@ -45,15 +47,15 @@
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yF1-XU-MzZ">
-                                        <rect key="frame" x="0.0" y="48" width="361" height="40"/>
+                                        <rect key="frame" x="0.0" y="75" width="361" height="40"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4gt-gD-LO4">
-                                        <rect key="frame" x="0.0" y="96" width="361" height="40"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="4gt-gD-LO4">
+                                        <rect key="frame" x="0.0" y="150" width="361" height="40"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NS-kt-C60">
-                                                <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="40"/>
                                                 <color key="backgroundColor" name="Secondary"/>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
@@ -63,7 +65,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Dc-59-2gK">
-                                                <rect key="frame" x="184.66666666666663" y="0.0" width="176.33333333333337" height="40"/>
+                                                <rect key="frame" x="189.66666666666663" y="0.0" width="171.33333333333337" height="40"/>
                                                 <color key="backgroundColor" name="Primary"/>
                                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Button"/>
@@ -76,13 +78,24 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="t6Z-Hh-peU">
+                                <rect key="frame" x="16" y="175" width="361" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="S3M-fV-See"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="backgroundColor" name="Quaternary"/>
                         <constraints>
+                            <constraint firstItem="t6Z-Hh-peU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3qg-FZ-3B8"/>
                             <constraint firstItem="R48-Rk-FMZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="IYh-uc-HaY"/>
+                            <constraint firstItem="t6Z-Hh-peU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Lcb-f5-UK4"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R48-Rk-FMZ" secondAttribute="trailing" constant="16" id="OSo-1a-eio"/>
-                            <constraint firstItem="R48-Rk-FMZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="QnJ-oJ-IN0"/>
+                            <constraint firstItem="R48-Rk-FMZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="300" id="QnJ-oJ-IN0"/>
+                            <constraint firstItem="t6Z-Hh-peU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="bVB-F4-1W5"/>
+                            <constraint firstItem="t6Z-Hh-peU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="pF3-my-efm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t6Z-Hh-peU" secondAttribute="trailing" constant="16" id="reT-dM-qCO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EJl-fU-ZNE"/>
@@ -98,7 +111,7 @@
             </objects>
             <point key="canvasLocation" x="56" y="4"/>
         </scene>
-        <!--Home View Controller-->
+        <!--Mapa-->
         <scene sceneID="qEi-cm-h9D">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BOy-RT-B1e" customClass="HomeViewController" customModule="gps_tracking" customModuleProvider="target" sceneMemberID="viewController">
@@ -107,7 +120,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="C0T-sc-GF5">
-                                <rect key="frame" x="16" y="119" width="361" height="136"/>
+                                <rect key="frame" x="16" y="171" width="361" height="136"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOc-yI-YKN">
                                         <rect key="frame" x="0.0" y="0.0" width="361" height="40"/>
@@ -135,14 +148,16 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ndl-IN-dxk"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="Quaternary"/>
                         <constraints>
                             <constraint firstItem="Ndl-IN-dxk" firstAttribute="trailing" secondItem="C0T-sc-GF5" secondAttribute="trailing" constant="16" id="36M-wm-QUv"/>
                             <constraint firstItem="C0T-sc-GF5" firstAttribute="leading" secondItem="Ndl-IN-dxk" secondAttribute="leading" constant="16" id="jsf-WO-2RP"/>
                             <constraint firstItem="C0T-sc-GF5" firstAttribute="top" secondItem="Ndl-IN-dxk" secondAttribute="top" constant="16" id="mP8-Hw-8SV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3pk-Ta-2tt"/>
+                    <navigationItem key="navigationItem" title="Mapa" id="3pk-Ta-2tt">
+                        <barButtonItem key="backBarButtonItem" title="Salir" id="Fhn-rb-fRV"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="closeSessionButton" destination="89O-C6-LK5" id="hKA-NI-TAv"/>
                         <outlet property="emailLabel" destination="7Lr-my-NYx" id="z63-sE-0Zs"/>
@@ -155,17 +170,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="logo" width="55.666667938232422" height="55.666667938232422"/>
         <namedColor name="Primary">
             <color red="0.019999999552965164" green="0.2669999897480011" blue="0.36899998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Quaternary">
+            <color red="0.83099997043609619" green="0.94499999284744263" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Secondary">
             <color red="0.093999996781349182" green="0.60399997234344482" blue="0.70599997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>
